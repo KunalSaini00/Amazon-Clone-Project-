@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+
+
+
+<body>
+    <header>
+        <div class="navbar" id="top">
+            <a href="index.html">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div></a>
+
+            <div class="nav-address border">
+                <p class="deliver">Deliver to Lovely</p>
+                <div class="add-icon">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <p class="india">Phagwara, India</p>
+                </div>
+            </div>
+
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                    <option>Alexa Skills</option>
+                    <option>Amazon Device</option>
+                    <option>Amazon Fresh</option>
+                    <option>Amazon Pharmacy</option>
+                    <option>Appliances</option>
+                    <option>Baby</option>
+                    <option>Beauty</option>
+                    <option>Books</option>
+                </select>
+                <input placeholder="Search Amazon" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-signin border">
+
+                <p><span>Hello, Sign in</span></p>
+                <p class="account">Account & Lists</p>
+
+            </div>
+
+            <div class="dropdown-content">
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+
+            </div>
+
+            <div class="nav-return border">
+                <p><span>Returns</span></p>
+                <p class="account">& Orders</p>
+            </div>
+
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-all border" id="sidebar-open">
+                <p onclick="offcanvasOpener()">All <i class="fa-solid fa-bars"></i></p>
+            </div>
+            <div class="panel-ops">
+                <p class="border">Today's Deal</p>
+                <p class="border">Customer Service</p>
+                <p class="border">Registry</p>
+                <p class="border">Gift Cards</p>
+                <p class="border">Sell</p>
+            </div>
+            <div class="panel-deals border">
+                Shop deals in Electronics
+            </div>
+        </div>
+    </header>
+
+
+    <div class="shoping-body">
+        <div class="shoping-cart">
+            <div class="shop-head">
+                <h1 style="color: black;">Shopping Cart</h1>
+                <p style="color: blue;">Deselct all items</p><br>
+                <hr>
+            </div>
+
+
+            <div class="shop-desc">
+                <div class="image">
+                    <img src="https://m.media-amazon.com/images/I/717TPJMrYGL._AC_AA360_.jpg" width="200px"
+                        height="200px">
+                </div>
+                <div class="img-desc">
+                    <b>boAt Wave Sigma Smartwatch with 2.01" HD Display,<br>Bluetooth Calling, Coins, DIY Watch
+                        Face</b><br>
+                    <div class="division">
+                        <button class="btn-danger">Loot offer</button>
+                        <p style="color: red;margin-top: 15px; padding-left: 20px;">Great Indian Festival</p>
+                    </div>
+                    <div class="price">
+                        <b>&#8377;1,199</b>
+                        <p>
+                            <s style="margin-left: 30px; font-size: 10px;">MRP. &#8377;7,990</s>
+                        </p>
+                    </div>
+                    <span>In stock</span><br><span style="color: blue; cursor: no-drop;"> Eligible for FREE
+                        Shipping</span><br><br>
+                    <span><b>Color: </b>
+                        <p>Golden black</p>
+                    </span>
+
+                    <div class="Quant">
+                        <label for="quantity" style="margin-top: 10px;">Quantity: </label>
+                        <div class="quantity-control">
+                            <button id="decrease">-</button>
+                            <span id="quantity">1</span>
+                            <button id="increase">+</button>
+                        </div>
+                    </div>
+
+
+                    <hr>
+                    <div class="shop-foot">
+                        <h1><span class="price" style="font-size: large;">Total: ₹1199</span></h1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="shoping-bill">
+            <div class="bill-head">
+                <span style="font-size: 20px; color: green;">&#10003;</span>
+                <div class="head-para">
+                    <p style="color: green;">Your order is eligible for FREE Delivery.</p>
+                    <p>Select this option at checkout. Details</p>
+                </div>
+            </div>
+            <div class="bill-price">
+                <h1><span class="price" style="font-size: large;">₹1199</span></h1>
+                <input type="checkbox">Claim Rewards and free gift
+            </div>
+            <div class="submit">
+                <input type="submit" class="proceed" value=" proceed to buy" onclick="pay()">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="offcanvas" class="offcanvas">
+        <div class="off-head">
+
+            <h2 class="heading">welcome back</h2>
+
+            <i class="fa fa-close" onclick="closeOffcanvas()" id="close" style="font-size:36px"></i>
+        </div>
+        <div class="off-content">
+            <h3>Trending</h3><br>
+            <p>Best Seller</p><br>
+            <p>New Releases</p><br>
+            <p>Movies and shakers</p><br><br>
+            <hr>
+            <br>
+            <h3>Digital Content And Devices</h3><br>
+            <p>Amazon miniTV- FREE entertainment</p><br>
+            <p>Echo & Alexa</p><br>
+            <p>Fire Tv</p><br>
+            <p>Kindle E-Readers & eBooks</p><br>
+            <p>Audible Audiobooks</p><br>
+            <p>Amazon Prime Video</p><br><br>
+            <hr>
+
+
+        </div>
+    </div>
+
+
+
+    <footer style="margin-top: -10px;">
+        <div class="foot-panel1">
+            <a href="#top">Back to Top</a>
+        </div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to Know us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+
+            <ul>
+                <p>Make Money with Us</p>
+                <a>Sell products on Amazon</a>
+                <a>Sell on Amazon Business</a>
+                <a>Sell apps on Amazon</a>
+                <a>Become an Affiliate</a>
+                <a>Advertise Your Products</a>
+                <a>Self-Publish with Us</a>
+                <a>Host an Amazon Hub</a>
+            </ul>
+
+            <ul>
+                <p>
+                <p>Amazon Payment Products</p>
+                <a>Amazon Business Card</a>
+                <a>Shop with Points</a>
+                <a>Reload Your Balance</a>
+                <a>Amazon Currency Converter</a>
+            </ul>
+
+            <ul>
+                <p>Let Us Help You</p>
+                <a>Amazon and COVID-19</a>
+                <a>Your Account</a>
+                <a>Your Orders</a>
+                <a>Shipping Rates & Policies</a>
+                <a>Returns & Replacements</a>
+                <a>Manage Your Content and Devices</a>
+                <a>Amazon Assistant</a>
+                <a>Help</a>
+            </ul>
+        </div>
+
+        <div class="foot-panel3">
+            <div class="logo"></div>
+        </div>
+
+        <div class="foot-panel4">
+            <div class="pages">
+                <a>Conditions of Use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                ©Made for project purpose only
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script>
+        function offcanvasOpener() {
+            var offcanvas = document.getElementById("offcanvas");
+            offcanvas.classList.add("open");
+        }
+
+        function closeOffcanvas() {
+            var offcanvas = document.getElementById("offcanvas");
+            offcanvas.classList.remove("open");
+        }
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const quantitySpan = document.getElementById('quantity');
+            const dec = document.getElementById('decrease');
+            const inc = document.getElementById('increase');
+            const priceElement = document.querySelectorAll('.price');
+            dec.addEventListener('click', function () {
+                let currentQuantity = parseInt(quantitySpan.textContent);
+                if (currentQuantity > 1) {
+                    currentQuantity--;
+                    quantitySpan.textContent = currentQuantity;
+                    updatePrice(currentQuantity);
+                }
+            });
+
+            inc.addEventListener('click', function () {
+                let currentQuantity = parseInt(quantitySpan.textContent);
+                currentQuantity++;
+                quantitySpan.textContent = currentQuantity;
+                updatePrice(currentQuantity);
+            });
+
+            function updatePrice(quantity) {
+                const unitPrice = 1199.00;
+                const newPrice = unitPrice * quantity;
+                for (let index = 0; index < priceElement.length; index++) {
+                    priceElement[index].textContent = '₹' + newPrice.toFixed(2);
+
+                }
+
+            }
+        });
+
+        function pay() {
+            confirm("Are You sure to buy ?? ");
+        }
+
+    </script>
+
+</body>
+
+</html>
